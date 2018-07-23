@@ -1,0 +1,12 @@
+branches:
+  only:
+  - master
+language: csharp
+solution: Plutus.sln
+mono: none
+dotnet: 2.1.200
+script:
+ - dotnet restore
+ - dotnet test Plutus.Tests/Plutus.Tests.csproj -v n
+services:
+  - redis-server

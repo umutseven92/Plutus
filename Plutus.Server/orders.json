@@ -1,0 +1,12 @@
+﻿{
+  "Orders": [
+    {
+      "Base": "BTC",
+      "Symbol": "XRP",
+      "PLSymbol": "USDT",
+      "ProfitStop": "10",
+      "LossStop": "10",
+      "BuyAmount": "1"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Server", "Plutus.Server\Plutus.Server.csproj", "{EE022DAF-88BA-43FF-A0F4-7FD37D542AD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Core", "Plutus.Core\Plutus.Core.csproj", "{5698CADB-EF72-40DD-A5AA-907D64A3CCDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Tests", "Plutus.Tests\Plutus.Tests.csproj", "{1DFF3146-2238-4EE1-8620-163BCC7851C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE022DAF-88BA-43FF-A0F4-7FD37D542AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE022DAF-88BA-43FF-A0F4-7FD37D542AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE022DAF-88BA-43FF-A0F4-7FD37D542AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE022DAF-88BA-43FF-A0F4-7FD37D542AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5698CADB-EF72-40DD-A5AA-907D64A3CCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5698CADB-EF72-40DD-A5AA-907D64A3CCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5698CADB-EF72-40DD-A5AA-907D64A3CCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5698CADB-EF72-40DD-A5AA-907D64A3CCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
