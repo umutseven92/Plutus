@@ -1,4 +1,4 @@
-# Plutus [![Build Status](https://travis-ci.org/umutseven92/Plutus.svg?branch=master)](https://travis-ci.org/umutseven92/Plutus)
+# Plutus [![Build Status](https://travis-ci.org/umutseven92/Plutus.svg?branch=master)](https://travis-ci.org/umutseven92/Plutus) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4461a03d867f449a914bf1f20eec0404)](https://www.codacy.com/project/umutseven92/Plutus/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=umutseven92/Plutus&amp;utm_campaign=Badge_Grade_Dashboard)
 
 ## Overview
 Plutus is a customizable, exchange agnostic cryptocurrency trading bot. You configure:
