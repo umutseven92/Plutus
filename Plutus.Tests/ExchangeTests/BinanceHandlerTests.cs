@@ -3,7 +3,7 @@ using Plutus.Core.DI.Modules;
 using Plutus.Core.Interfaces;
 using Xunit;
 
-namespace Plutus.Tests.ExchangeTests
+namespace Plutus.Tests.Integration.ExchangeTests
 {
     public class BinanceHandlerTests : TestBase
     {

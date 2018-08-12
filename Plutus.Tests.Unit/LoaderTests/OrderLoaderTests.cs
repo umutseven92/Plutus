@@ -3,7 +3,7 @@ using Plutus.Core.Helpers;
 using Plutus.Core.Interfaces;
 using Xunit;
 
-namespace Plutus.Tests.LoaderTests
+namespace Plutus.Tests.Unit.LoaderTests
 {
     public class OrderLoaderTests : LoaderTestBase
     {

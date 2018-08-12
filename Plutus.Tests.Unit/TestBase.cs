@@ -1,7 +1,7 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
+using System;
 
-namespace Plutus.Tests.Integration
+namespace Plutus.Tests.Unit
 {
     public class TestBase: IDisposable
     {

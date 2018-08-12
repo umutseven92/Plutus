@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Core", "Plutus.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Tests", "Plutus.Tests\Plutus.Tests.csproj", "{1DFF3146-2238-4EE1-8620-163BCC7851C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plutus.Tests.Unit", "Plutus.Tests.Unit\Plutus.Tests.Unit.csproj", "{C34659FB-3211-4BEF-BCC6-5EEE29FB975A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFF3146-2238-4EE1-8620-163BCC7851C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C34659FB-3211-4BEF-BCC6-5EEE29FB975A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C34659FB-3211-4BEF-BCC6-5EEE29FB975A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C34659FB-3211-4BEF-BCC6-5EEE29FB975A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C34659FB-3211-4BEF-BCC6-5EEE29FB975A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

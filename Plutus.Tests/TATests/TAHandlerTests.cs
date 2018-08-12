@@ -4,7 +4,7 @@ using Plutus.Core.DI.Modules;
 using Plutus.Core.Interfaces;
 using Xunit;
 
-namespace Plutus.Tests.TATests
+namespace Plutus.Tests.Integration.TATests
 {
     public class TAHandlerTests : TestBase
     {
