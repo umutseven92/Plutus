@@ -1,0 +1,20 @@
+﻿{
+  "Orders": [
+    {
+      "Base": "BTC",
+      "Symbol": "XRP",
+      "ProfitStop": "8",
+      "LossStop": "11",
+      "PLSymbol": "USDT",
+      "BuyAmount": "1"
+    },
+    {
+      "Base": "LTC",
+      "Symbol": "BTC",
+      "ProfitStop": "12",
+      "LossStop": "15",
+      "PLSymbol": "XRP",
+      "BuyAmount": "2.5"
+    }
+  ]
+}

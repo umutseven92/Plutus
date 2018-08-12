@@ -5,7 +5,7 @@ using Plutus.Core.Helpers;
 using Plutus.Core.Interfaces;
 using Xunit;
 
-namespace Plutus.Tests.DatabaseTests
+namespace Plutus.Tests.Integration.DatabaseTests
 {
     public class RedisTests : TestBase
     {

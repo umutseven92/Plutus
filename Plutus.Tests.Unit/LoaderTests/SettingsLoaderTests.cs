@@ -2,13 +2,13 @@
 using Plutus.Core.Interfaces;
 using Xunit;
 
-namespace Plutus.Tests.LoaderTests
+namespace Plutus.Tests.Unit.LoaderTests
 {
     public class SettingsLoaderTests : LoaderTestBase
     {
         private const int BuyInterval = 2500;
         private const int SellInterval = 1000;
-        private const string RedisUrl = "localhost:6379";
+        private const string RedisUrl = "REDIS_URL";
         private const bool Test = true;
 
         [Fact]
