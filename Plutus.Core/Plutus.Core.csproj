@@ -13,7 +13,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
-    <PackageReference Include="Trady.Analysis" Version="3.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Autofac, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da">

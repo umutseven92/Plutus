@@ -118,11 +118,12 @@ namespace Plutus.Core.Helpers
             return balanceValue;
         }
 
-        public async Task<PricePrediction> GetPricePrediction(string orderBase, string orderSymbol)
+        public async Task<PricePrediction> GetPricePrediction(string orderBase, string orderSymbol, Period period)
         {
-            var candleSticks = await _binanceHandler.GetCandlesticks(orderBase, orderSymbol);
-
-            var prediction = _taHandler.GetPricePrediction(candleSticks);
+            var closingPrices = await _binanceHandler.GetClosingPrices(orderBase, orderSymbol, period);
+            var currentPrice = await _binanceHandler.GetPrice(orderBase, orderSymbol);
+            
+            var prediction = _taHandler.GetPricePrediction(closingPrices, currentPrice);
             _logger.LogInformation($"Prediction for {orderSymbol} is {prediction.ToString()}.");
 
             return prediction;
