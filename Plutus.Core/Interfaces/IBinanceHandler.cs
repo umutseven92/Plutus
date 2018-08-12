@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Trady.Core;
+using Plutus.Core.Enums;
 
 namespace Plutus.Core.Interfaces
 {
@@ -12,7 +12,7 @@ namespace Plutus.Core.Interfaces
 
         Task<decimal?> GetBalance(string symbol);
 
-        Task<IEnumerable<Candle>> GetCandlesticks(string orderBase, string orderSymbol);
+        Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period);
 
         Task Buy(string orderBase, string orderSymbol, decimal amount);
 

@@ -22,7 +22,7 @@ namespace Plutus.Core.Interfaces
 
         Task<bool> CheckBalance(decimal cost, string balanceBase);
 
-        Task<PricePrediction> GetPricePrediction(string orderBase, string orderSymbol);
+        Task<PricePrediction> GetPricePrediction(string orderBase, string orderSymbol, Period period);
 
         Task<bool> IsOnline();
         

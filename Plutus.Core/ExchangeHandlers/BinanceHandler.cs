@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Binance;
+using Plutus.Core.Enums;
 using Plutus.Core.Interfaces;
-using Trady.Core;
 
 namespace Plutus.Core.ExchangeHandlers
 {
@@ -45,15 +45,17 @@ namespace Plutus.Core.ExchangeHandlers
             return price.Value;
         }
 
-        public async Task<IEnumerable<Candle>> GetCandlesticks(string orderBase, string orderSymbol)
+        public async Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period)
         {
             var symbol = $"{orderSymbol}/{orderBase}";
 
-            var candlesticks = await _binanceClient.GetCandlesticksAsync(symbol, CandlestickInterval.Hour);
+            var candleStickInterval = ConvertPeriodToCandlestickInterval(period);
+            
+            var candlesticks = await _binanceClient.GetCandlesticksAsync(symbol, candleStickInterval);
 
-            var tracyCandles = ConvertToTradyCandle(candlesticks);
-
-            return tracyCandles;
+            var closingPrices = ConvertCandlestickToClosingPrices(candlesticks);
+            
+            return closingPrices;
         }
         
         public async Task BuyTest(string orderBase, string orderSymbol, decimal amount)
@@ -109,18 +111,24 @@ namespace Plutus.Core.ExchangeHandlers
             await _binanceClient.PlaceAsync(clientOrder);
         }
 
-        private static IEnumerable<Candle> ConvertToTradyCandle(IEnumerable<Candlestick> candlesticks)
+        private CandlestickInterval ConvertPeriodToCandlestickInterval(Period period)
         {
-            var tradyCandles = new List<Candle>();
-
-            foreach (var candlestick in candlesticks)
+            switch (period)
             {
-                var tradyCandle = new Candle(candlestick.Time, candlestick.Open, candlestick.High, candlestick.Low,
-                    candlestick.Close, candlestick.Volume);
-                tradyCandles.Add(tradyCandle);
+                case Period.Hourly:
+                    return CandlestickInterval.Hour;
+                case Period.Daily:
+                    return CandlestickInterval.Day;
+                default:
+                    throw new NotImplementedException();
             }
+        }
 
-            return tradyCandles;
+        private IEnumerable<decimal> ConvertCandlestickToClosingPrices(IEnumerable<Candlestick> candlesticks)
+        {
+            var closingPrices = candlesticks.Select(c => c.Close);
+
+            return closingPrices;
         }
     }
 }

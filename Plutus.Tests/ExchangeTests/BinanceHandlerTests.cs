@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Plutus.Core.DI.Modules;
+using Plutus.Core.Enums;
 using Plutus.Core.Interfaces;
 using Xunit;
 
@@ -53,7 +54,7 @@ namespace Plutus.Tests.Integration.ExchangeTests
         {
             var handler = Container.Resolve<IBinanceHandler>();
 
-            var candlesticks = await handler.GetCandlesticks("BTC", "XRP");
+            var candlesticks = await handler.GetClosingPrices("BTC", "XRP", Period.Hourly);
             
             Assert.NotNull(candlesticks);
             Assert.NotEmpty(candlesticks);

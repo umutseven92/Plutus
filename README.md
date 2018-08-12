@@ -81,7 +81,7 @@ Replace **REDIS_URL** with the URL your Redis instance is running on. Redis is u
 #### Test Run
 If the Test value is true, than Plutus will only do *test* buys and sells, therefore not losing you real money. Its better to keep this true until you're sure you know what you are doing.
 
-### Plutus.Server/orders.jsonn
+### Plutus.Server/orders.json
 
 This is where you define the coin you want to buy & sell.
 
@@ -132,7 +132,7 @@ Plutus is in pre-alpha. Many things are yet to be implemented. It has only been 
 ## What Is Implemented
 * Main buy & sell loops
 * Binance support
-* [RSI](https://www.investopedia.com/terms/r/rsi.asp) for price prediction
+* [SMA](https://www.investopedia.com/university/movingaverage/) for price prediction
 
 ## What Is Missing
 * Support for many more exhanges
@@ -144,7 +144,5 @@ Plutus is in pre-alpha. Many things are yet to be implemented. It has only been 
 [Binance.NET](https://github.com/sonvister/Binance) (MIT)
 
 [FluentScheduler](https://github.com/fluentscheduler/FluentScheduler) (BSD)
-
-[Trady](https://github.com/lppkarl/Trady) (Apache License 2.0)
 
 [StackExchange.Redis](https://github.com/StackExchange/StackExchange.Redis) (MIT)

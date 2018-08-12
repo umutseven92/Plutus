@@ -19,18 +19,5 @@ namespace Plutus.Tests.Integration.TATests
             base.SetContainer(builder);
         }
 
-        [Fact]
-        public async Task CanCalculateRsi()
-        {
-            var taHandler = Container.Resolve<ITAHandler>();
-            var binanceHandler = Container.Resolve<IBinanceHandler>();
-
-            var candles = await binanceHandler.GetCandlesticks("BTC", "XRP");
-
-            var rsi = taHandler.CalculateRSI(candles);
-            
-            Assert.NotNull(rsi);
-            Assert.InRange(rsi.Value, 0, 100);
-        }
     }
 }

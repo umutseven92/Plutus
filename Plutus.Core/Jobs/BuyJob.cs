@@ -24,7 +24,7 @@ namespace Plutus.Core.Jobs
                 var price = await _plutusService.GetPrice(order.Base, order.Symbol);
 
                 // Determine if its going up or down
-                var prediction = await _plutusService.GetPricePrediction(order.Base, order.Symbol);
+                var prediction = await _plutusService.GetPricePrediction(order.Base, order.Symbol, Period.Hourly);
 
                 if (prediction == PricePrediction.Bullish)
                 {
