@@ -7,6 +7,6 @@ mono: none
 dotnet: 2.0.0
 script:
  - dotnet restore
- - dotnet test Plutus.Tests/Plutus.Tests.Unit.csproj -v n
+ - dotnet test Plutus.Tests.Unit/Plutus.Tests.Unit.csproj -v n
 services:
   - redis-server
