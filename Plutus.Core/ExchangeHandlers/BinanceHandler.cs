@@ -45,13 +45,13 @@ namespace Plutus.Core.ExchangeHandlers
             return price.Value;
         }
 
-        public async Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period)
+        public async Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period, int take)
         {
             var symbol = $"{orderSymbol}/{orderBase}";
 
             var candleStickInterval = ConvertPeriodToCandlestickInterval(period);
             
-            var candlesticks = await _binanceClient.GetCandlesticksAsync(symbol, candleStickInterval);
+            var candlesticks = await _binanceClient.GetCandlesticksAsync(symbol, candleStickInterval, take);
 
             var closingPrices = ConvertCandlestickToClosingPrices(candlesticks);
             

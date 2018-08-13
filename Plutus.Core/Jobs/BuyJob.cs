@@ -7,6 +7,7 @@ namespace Plutus.Core.Jobs
 {
     public class BuyJob : IJob
     {
+        private const int PeriodLimit = 7;
         private readonly IPlutusService _plutusService;
         private readonly bool _test;
 
@@ -24,7 +25,7 @@ namespace Plutus.Core.Jobs
                 var price = await _plutusService.GetPrice(order.Base, order.Symbol);
 
                 // Determine if its going up or down
-                var prediction = await _plutusService.GetPricePrediction(order.Base, order.Symbol, Period.Hourly);
+                var prediction = await _plutusService.GetPricePrediction(order.Base, order.Symbol, Period.Hourly, PeriodLimit);
 
                 if (prediction == PricePrediction.Bullish)
                 {

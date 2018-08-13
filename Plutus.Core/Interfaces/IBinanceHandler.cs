@@ -12,7 +12,7 @@ namespace Plutus.Core.Interfaces
 
         Task<decimal?> GetBalance(string symbol);
 
-        Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period);
+        Task<IEnumerable<decimal>> GetClosingPrices(string orderBase, string orderSymbol, Period period, int take);
 
         Task Buy(string orderBase, string orderSymbol, decimal amount);
 

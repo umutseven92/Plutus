@@ -17,6 +17,7 @@ namespace Plutus.Core.Jobs
 
         public async void Execute()
         {
+            return;
             // Get all open orders
             var orders = await _plutusService.GetAllOpenOrders();
 

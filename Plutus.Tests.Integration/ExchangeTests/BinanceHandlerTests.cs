@@ -54,7 +54,7 @@ namespace Plutus.Tests.Integration.ExchangeTests
         {
             var handler = Container.Resolve<IBinanceHandler>();
 
-            var candlesticks = await handler.GetClosingPrices("BTC", "XRP", Period.Hourly);
+            var candlesticks = await handler.GetClosingPrices("BTC", "XRP", Period.Hourly, 7);
             
             Assert.NotNull(candlesticks);
             Assert.NotEmpty(candlesticks);
