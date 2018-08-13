@@ -4,7 +4,7 @@ branches:
 language: csharp
 solution: Plutus.sln
 mono: none
-dotnet: 2.0.0
+dotnet: 2.1
 script:
  - dotnet restore
  - dotnet test Plutus.Tests.Unit/Plutus.Tests.Unit.csproj -v n
