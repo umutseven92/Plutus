@@ -435,5 +435,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Vim
+*.swp
 
 # End of https://www.gitignore.io/api/csharp,windows,aspnetcore
