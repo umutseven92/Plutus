@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using Plutus.Core.Interfaces;
@@ -12,7 +13,7 @@ namespace Plutus.Core.Helpers
         public int SellInterval { get; }
 
         public bool Test { get; }
-        
+
         public string RedisUrl { get; }
 
         public List<ExhangeConfig> ExhangeConfigurations { get; }
@@ -29,8 +30,15 @@ namespace Plutus.Core.Helpers
             foreach (var exchange in exchanges)
             {
                 var name = exchange["Name"].Value<string>();
+
+#if DEBUG
+                var apiKey = Environment.GetEnvironmentVariable($"{name}_ApiKey");
+                var secretKey = Environment.GetEnvironmentVariable($"{name}_SecretKey");;
+#else
                 var apiKey = exchange["ApiKey"].Value<string>();
                 var secretKey = exchange["SecretKey"].Value<string>();
+
+#endif
 
                 ExhangeConfigurations.Add(new ExhangeConfig()
                 {
@@ -43,9 +51,9 @@ namespace Plutus.Core.Helpers
             BuyInterval = GetAppConfig<int>(obj, "BuyInterval");
 
             SellInterval = GetAppConfig<int>(obj, "SellInterval");
-            
+
             Test = GetAppConfig<bool>(obj, "Test");
-            
+
             RedisUrl = GetAppConfig<string>(obj, "RedisUrl");
         }
 
